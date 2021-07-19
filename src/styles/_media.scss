@@ -1,0 +1,36 @@
+@media (max-width: 770px) {
+  .main {
+    &-sidebar {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .main {
+    &-sec {
+      &-top {
+        display: block !important;
+        padding: 0.8rem 1rem !important;
+        &-1 {
+          gap: 1rem !important;
+          margin-bottom: 1rem;
+          .img-wrap {
+            span {
+              font-size: 0.7rem !important;
+            }
+            .icon-style {
+              margin-right: 0.6rem !important;
+            }
+          }
+          .sort-wrap {
+            span {
+              font-size: 0.7rem !important;
+              margin-right: 0.6rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
