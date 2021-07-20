@@ -153,6 +153,9 @@ div[class^='btn-'],
     }
     &-sec {
       flex: 1;
+      .menu-icon {
+        display: none;
+      }
       &-top {
         display: flex;
         justify-content: space-between;
@@ -205,6 +208,7 @@ div[class^='btn-'],
           border-radius: 10px;
           .item-main {
             display: flex;
+            margin-right: 1rem;
             &-badge {
               flex: none;
               background-color: #f1f5f7;

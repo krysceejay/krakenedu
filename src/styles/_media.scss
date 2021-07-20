@@ -1,12 +1,31 @@
 @media (max-width: 770px) {
   .main {
+    padding: 4rem 0 !important;
+    display: block !important;
+    position: relative;
     &-sidebar {
-      display: none;
+      position: absolute;
+      top: 1.5rem;
+      left: -90% !important;
+      width: 80% !important;
+      transition: 0.5s;
+      z-index: 2;
+      background-color: rgb(243, 237, 237);
+      padding: 1rem;
+    }
+    .active-bar {
+      left: 0 !important;
+    }
+    &-sec {
+      .menu-icon {
+        display: block !important;
+        //background: rgb(243, 237, 237);
+      }
     }
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 470px) {
   .main {
     &-sec {
       &-top {
@@ -27,6 +46,9 @@
             span {
               font-size: 0.7rem !important;
               margin-right: 0.6rem !important;
+            }
+            select {
+              font-size: 0.7rem;
             }
           }
         }

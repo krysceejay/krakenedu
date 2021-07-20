@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Item from '../components/Item'
 
 const data = [
@@ -47,12 +47,20 @@ const data = [
 ]
 
 const Home = () => {
+    const menuRef = useRef()
+    const sidebarRef = useRef()
+
+    const handleShow = () => {
+        sidebarRef.current.classList.toggle("active-bar")   
+        menuRef.current.classList.toggle("toggle")   
+    }
 
     return (
         <main id="home">
             <div className="container">
+                
                 <div className="main py-3">
-                    <aside className="main-sidebar">
+                    <aside className="main-sidebar" ref={sidebarRef}>
                         <div className="main-sidebar-1">
                             <h3>Frontend Mentor</h3>
                             <p>Feedback Board</p>
@@ -93,6 +101,9 @@ const Home = () => {
                         </div>
                     </aside>
                     <section className="main-sec">
+                        <div id="dash-bar" className="menu-icon" ref={menuRef} onClick={handleShow}>
+                            <span></span>
+                        </div>
                         <div className="main-sec-top">
                             <div className="main-sec-top-1">
                                 <div className="img-wrap">
@@ -107,7 +118,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <button className="btn-add">
-                                <i class="fa fa-plus" aria-hidden="true"></i> Add Feedback
+                                <i className="fa fa-plus" aria-hidden="true"></i> Add Feedback
                             </button>
                         </div>
                         <div className="main-sec-wrap my-1">

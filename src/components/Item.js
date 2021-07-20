@@ -15,7 +15,7 @@ const Item = ({item}) => {
                 </div>
             </div>
             <div className="comment">
-                <i class="fa fa-comment" aria-hidden="true"></i>
+                <i className="fa fa-comment" aria-hidden="true"></i>
                 <span>{item.commentNum}</span>
             </div>
         </div>
